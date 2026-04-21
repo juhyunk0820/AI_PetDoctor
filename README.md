@@ -17,4 +17,4 @@ React Native 기반 반려동물 건강상담 앱을 기획부터
 **기술 스택**
 React Native · TypeScript · Expo · React Query · Zustand · Toss Payments
 
-> ⚠️ NDA로 인해 소스 코드는 비공개입니다. 상세 내용은 [포트폴리오]([노션 링크](https://noisy-alto-7c7.notion.site/Frontend-Developer-Portfolio-b7aa9390bde84b9b9bcc822e15f037b5?pvs=74))를 참고하세요.
+> ⚠️ NDA로 인해 소스 코드는 비공개입니다. 상세 내용은 [포트폴리오](https://noisy-alto-7c7.notion.site/Frontend-Developer-Portfolio-b7aa9390bde84b9b9bcc822e15f037b5?pvs=74)를 참고하세요.
