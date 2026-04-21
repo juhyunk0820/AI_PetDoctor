@@ -1,20 +1,109 @@
-# AI_PetDoctor
+# AI 펫닥터 개발일지 🐾
 
-## 🚀 Production Projects
+> 반려동물 헬스케어 스타트업의 React Native 앱을 기획부터 양대 스토어 출시까지
+> 담당하며 겪은 기술적 의사결정과 문제 해결 과정의 기록
 
-### AI 펫닥터 (반려동물 헬스케어 스타트업)
-> 2025.11 - 2026.04 · 프리랜서 프론트엔드 단독 담당
+---
 
-React Native 기반 반려동물 건강상담 앱을 기획부터 
-양대 스토어 정식 출시까지 담당했습니다.
+## 📌 이 저장소는?
 
-**주요 성과**
-- 🏪 App Store / Play Store 정식 출시 (7-8인 팀 중 프론트엔드 단독)
-- 💳 Apple IAP 심사 리젝 1개월 대응 → 서비스 구조 재설계로 수수료 30% → 3% 확보
-- 🔧 React Query + Zustand 상태 관리 아키텍처 설계
-- 📱 다디바이스 반응형 대응 (폴드, 태블릿, 확대 모드)
+**이 저장소는 소스 코드가 아닌, 개발 과정의 기록입니다.**
 
-**기술 스택**
-React Native · React · TypeScript · Expo · EAS · React Query · Zustand · Toss Payments · KCB PASS · CustomCamera · Toss Payments · coderabbit · Jira · Slack · Social Login(kakao, naver, google, apple) · Figma MCP
+AI 펫닥터는 NDA로 인해 소스 코드를 공개할 수 없지만,
+**프로젝트를 진행하며 마주한 문제와 해결 과정은 저만의 자산**이라 생각해 이곳에 정리합니다.
 
-> ⚠️ NDA로 인해 소스 코드는 비공개입니다. 상세 내용은 [포트폴리오](https://noisy-alto-7c7.notion.site/Frontend-Developer-Portfolio-b7aa9390bde84b9b9bcc822e15f037b5?pvs=74)를 참고하세요.
+- ✍️ **왜** 이 기술을 선택했는지
+- 🔥 **무엇이** 어려웠고 **어떻게** 극복했는지
+- 💡 **무엇을** 배웠고 **다음엔** 어떻게 할지
+
+...에 대한 솔직한 기록입니다.
+
+---
+
+## 🚀 프로젝트 개요
+
+**AI 펫닥터 · 반려동물 24시 건강상담 앱**
+`2025.11 - 2026.04` · 프리랜서 프론트엔드 단독 담당
+
+React Native 기반 반려동물 건강상담 앱을 기획부터 양대 스토어 정식 출시까지 담당했습니다.
+AI 이미지 인식으로 반려동물 증상을 1차 스크리닝하고, 수의사와 실시간 채팅 상담으로 연결해주는 24시간 헬스케어 플랫폼입니다.
+
+### 주요 성과
+
+- 🏪 **App Store / Play Store 정식 출시** (7-8인 팀 중 프론트엔드 단독)
+- 💳 **Apple IAP 심사 리젝 1개월 대응** → 서비스 구조 재설계로 수수료 30% → 3% 확보
+- 🔧 **React Query + Zustand 상태 관리 아키텍처** 설계
+- 📱 **다디바이스 반응형 대응** (폴드, 태블릿, OS 확대 모드)
+- 🔁 **PM 중도 퇴사 상황에서 도메인 기반 폴더 구조로 재편**하여 일정 내 출시
+
+### 기술 스택
+
+| 카테고리 | 사용 기술 |
+|----------|-----------|
+| **Core** | React Native · TypeScript · Expo · EAS |
+| **상태 관리** | React Query (TanStack Query) · Zustand |
+| **결제 / 인증** | Toss Payments · KCB PASS 본인인증 |
+| **소셜 로그인** | Apple · Kakao · Naver · Google |
+| **기타** | Custom Camera · React Navigation |
+| **협업 도구** | Jira · Slack · Figma · GitHub · CodeRabbit |
+
+---
+
+## 📚 개발일지
+
+기술 의사결정의 **"왜"** 와 문제 해결의 **"어떻게"** 에 대한 기록입니다.
+
+### 🏗 아키텍처 & 설계
+
+- [**01. 프로젝트 시작과 책임 범위**](docs/01_프로젝트_시작.md)
+  <br/>프리랜서로 프론트엔드 단독 담당을 맡게 된 배경과 초기 의사결정
+- [**02. 왜 Redux를 쓰지 않았는가: React Query + Zustand 아키텍처**](docs/02_아키텍처_설계.md)
+  <br/>서버 상태와 클라이언트 상태를 분리한 설계 철학과 트레이드오프
+
+### 🔥 문제 해결 스토리
+
+- [**03. Apple IAP 심사 리젝 1개월, 서비스 구조 재설계로 극복**](docs/03_Apple_IAP_심사_리젝_극복.md) ⭐
+  <br/>기술적 우회가 아닌 서비스 구조 재설계로 30%→3% 수수료 구조를 확보한 이야기
+- [**04. PM 중도 퇴사 커버 — 아키텍처로 커뮤니케이션 비용 줄이기**](docs/04_PM_공백_대응.md)
+  <br/>도메인 기반 폴더 구조로 팀 커뮤니케이션 비용을 낮춘 경험
+- [**06. Toss Payments 기반 이원 결제 시스템 설계**](docs/06_결제_시스템_이원화.md)
+  <br/>디지털 재화(멤버십)와 실물 상품(반려동물 용품)의 이원 결제 로직
+
+### 🎨 UI/UX 최적화
+
+- [**05. 다디바이스 반응형: 폴드·태블릿·OS 확대 모드**](docs/05_다디바이스_반응형.md)
+  <br/>한 화면을 N개의 디바이스에서 자연스럽게 보이게 만드는 여정
+
+### 💭 회고
+
+- [**07. 프로젝트 전체 회고와 다음에 적용할 것**](docs/07_회고_및_배운점.md)
+  <br/>6개월간의 프로젝트를 돌아보며 스스로에게 남긴 노트
+
+---
+
+## 📎 관련 링크
+
+- 🎨 [프론트엔드 포트폴리오 (Notion)](https://noisy-alto-7c7.notion.site/Frontend-Developer-Portfolio-b7aa9390bde84b9b9bcc822e15f037b5)
+- 🐙 [GitHub 프로필](https://github.com/juhyunk0820)
+- 📱 [App Store 앱 링크](https://apps.apple.com/kr/app/id6484592134)
+- 📱 [Google Play 앱 링크](https://play.google.com/store/apps/details?id=com.anlicy.petdoctor)
+
+---
+
+## ⚠️ NDA 관련
+
+- 소스 코드, 실제 API 구조, 클라이언트사 내부 정보는 공개하지 않습니다.
+- 이 저장소는 **공개 가능한 기술적 의사결정과 문제 해결 과정**만 다룹니다.
+- 예시 코드는 실제 구현이 아닌 **개념 이해를 돕기 위한 일반화된 패턴**입니다.
+- 스크린샷은 NDA 범위를 벗어나지 않는 선에서만 포함됩니다.
+
+---
+
+## 👤 About Me
+
+**강주현** · React Native Cross-Platform Developer
+
+- 세종대학교 컴퓨터공학과 졸업 (2026.02)
+- 🏆 세종대학교 캡스톤 디자인 우수상 (2등, 2024.06)
+- 🏆 교내 창업시연대회 3등 (30팀 참가, 2024.09)
+- 📧 juhyunk0820@naver.com
